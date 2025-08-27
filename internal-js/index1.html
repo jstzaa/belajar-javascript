@@ -3,10 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap-5.3.7-dist/css/bootstrap.min.css">
+    <script src="bootstrap-5.3.7-dist/js/bootstrap.bundle.min.js"></script>
     <title>Document</title>
 </head>
 <body>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Launch calculator
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="input-group flex-nowrap">
+                <input type="text" class="form-control" placeholder="Masukkan angka pertama" aria-label="Username" aria-describedby="addon-wrapping" id="angkaPertama">
+            </div><br>
+            <div class="input-group flex-nowrap">
+                <input type="text" class="form-control" placeholder="Masukkan angka kedua" aria-label="Username" aria-describedby="addon-wrapping" id="angkaKedua">
+            </div><br>
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-primary" onclick="hitung('+')">+</button>
+                <button type="button" class="btn btn-danger" onclick="hitung('-')">-</button>
+                <button type="button" class="btn btn-success" onclick="hitung('*')">*</button>
+                <button type="button" class="btn btn-warning" onclick="hitung('/')">/</button>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <h3>Hasil: <span id="hasil">0</span></h3>
+        </div>
+        </div>
+    </div>
+    </div>
+
+    <!--
+    <h2>Kalkulator Sederhana</h2>
+    <label>Masukkan angka pertama:</label>
+    <input type="number" id="angka1"><br><br>
+
+    <label>Masukkan angka kedua:</label>
+    <input type="number" id="angka2"><br><br>
+
+    <button onclick="hitung('+')">+</button>
+    <button onclick="hitung('-')">-</button>
+    <button onclick="hitung('*')">*</button>
+    <button onclick="hitung('/')">/</button>
+    
+    <h3>Hasil: <span id="hasilPenjumlahan">0</span></h3>
+    -->
+
     <script>
+        const myModal = document.getElementById('myModal')
+        const myInput = document.getElementById('myInput')
+
+        myModal.addEventListener('shown.bs.modal', () => {
+        myInput.focus()
+        })
+
+        function hitung(operasi) {
+        let angka1 = parseFloat(document.getElementById('angkaPertama').value);
+        let angka2 = parseFloat(document.getElementById('angkaKedua').value);
+        let hasil = 0;
+
+        // validasi input
+        if (isNaN(angka1) || isNaN(angka2)) {
+            document.getElementById('hasil').innerText = "Input tidak valid";
+            return;
+        }
+
+        switch (operasi) {
+            case '+':
+            hasil = angka1 + angka2;
+            break;
+            case '-':
+            hasil = angka1 - angka2;
+            break;
+            case '*':
+            hasil = angka1 * angka2;
+            break;
+            case '/':
+            if (angka2 === 0) {
+                document.getElementById('hasil').innerText = "Tidak bisa dibagi 0";
+                return;
+            }
+            hasil = angka1 / angka2;
+            break;
+            default:
+            hasil = "Operasi tidak dikenal";
+        }
+
+        document.getElementById('hasil').innerText = hasil;
+        
+        }
+        /*
+        function hitung(operasi) {
+        let angka1 = parseFloat(document.getElementById('angka1').value);
+        let angka2 = parseFloat(document.getElementById('angka2').value);
+        let hasil = 0;
+
+        if (isNaN(angka1) || isNaN(angka2)) {
+            document.getElementById('hasilPenjumlahan').innerText = "Input tidak valid";
+            return;
+        }
+
+        switch (operasi) {
+            case '+':
+            hasil = angka1 + angka2;
+            break;
+            case '-':
+            hasil = angka1 - angka2;
+            break;
+            case '*':
+            hasil = angka1 * angka2;
+            break;
+            case '/':
+            if (angka2 === 0) {
+                document.getElementById('hasilPenjumlahan').innerText = "Tidak bisa dibagi 0";
+                return;
+            }
+            hasil = angka1 / angka2;
+            break;
+            default:
+            hasil = "Operasi tidak dikenal";
+        }
+
+        document.getElementById('hasilPenjumlahan').innerText = hasil;
+        }
+        */
+
+        /*
         alert('selamat datang di kalkulator sederhana')
         let angka1 = prompt('masukkan angka')
         let operasi = prompt('masukkan operasi')
@@ -26,6 +157,7 @@
         }else{
             alert('error')
         }
+        */
     </script>
 </body>
 </html>
