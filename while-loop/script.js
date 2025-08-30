@@ -1,0 +1,6 @@
+/*
+Syntax:
+while(kondisi){
+    aksi
+}
+*/
