@@ -5,10 +5,10 @@ while(kondisi terminasi){
     increment/decrement
 }
 */
+let jmlAngkot = 20
+let noAngkot = 1 //variabel(nilai awal)
 
-let angkot = 1 //variabel(nilai awal)
-
-while(angkot <= 10){ //kondisi terminasi
-    console.log('Angkot No. ' + angkot + 'beroperasi dengan baik.') //aksi
-    angkot++ //increment
+while(noAngkot <= jmlAngkot){ //kondisi terminasi
+    console.log('Angkot No. ' + noAngkot + 'beroperasi dengan baik.') //aksi
+    noAngkot++ //increment
 }
