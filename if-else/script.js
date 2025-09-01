@@ -6,8 +6,9 @@ if(kondisi){
     aksi2(jika kondisi salah)
 }
 */
+let jmlAngkot = 10
 
-for(let noAngkot=1;noAngkot<=10;noAngkot++){
+for(let noAngkot=1;noAngkot<=jmlAngkot;noAngkot++){
     if(noAngkot <= 6){
         console.log('Angkot No. ' + noAngkot + ' beroperasi dengan baik.')
     }else{
