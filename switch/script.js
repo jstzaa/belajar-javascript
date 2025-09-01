@@ -22,20 +22,12 @@ let jurusan = prompt('Masukkan jurusan anda: \n [contoh: BDP, OTKP, AKL, TKJ, TB
 
 switch (jurusan){
     case 'BDP':
-        alert('Jurusan ini merupakan rumpun bisnis dan manajemen(bismen)')
-    break
     case 'OTKP':
-        alert('Jurusan ini merupakan rumpun bisnis dan manajemen(bismen)')
-    break
     case 'AKL':
         alert('Jurusan ini merupakan rumpun bisnis dan manajemen(bismen)')
     break
     case 'TKJ':
-        alert('Jurusan ini merupakan rumpun teknik')
-    break
     case 'TBSM':
-        alert('jurusan ini merupakan rumpun teknik')
-    break
     case 'RPL':
         alert('jurusan ini merupakan rumpun teknik')
     break
