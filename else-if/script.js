@@ -1,11 +1,14 @@
 /*
 syntax:
-if(kondisi){
-    aksi1(jika kondisi benar)
+if(kondisi 1){
+    aksi1(jika kondisi 1 benar)
+}else if(kondisi 2){
+    aksi2(jika kondisi 2 benar)
 }else{
-    aksi2(jika kondisi salah)
+    aksi3(jika kondisi salah)
 }
 */
+
 let jmlAngkot = 10
 
 for(let noAngkot=1;noAngkot<=jmlAngkot;noAngkot++){
