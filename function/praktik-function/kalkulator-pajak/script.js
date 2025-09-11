@@ -12,4 +12,4 @@ function hitungPajak(nilaiAwal, persentasePajak) {
     return hasil
 }
 
-alert('Nilai akhir pajak kamu: ' + hitungPajak(nilaiAwal, persentasePajak))
+alert('Nilai akhir pajak kamu: Rp' + hitungPajak(nilaiAwal, persentasePajak).toLocaleString('id-ID'))
