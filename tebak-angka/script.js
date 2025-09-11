@@ -1,29 +1,39 @@
 let ulang = true
 
 while (ulang === true){
-    alert('Selamat datang di game tebak angka \nTebak angka 1 - 10')
-
-    // player memilih angka
-    let player = parseInt(prompt('Masukkan angka tebakan'))
+    alert('Selamat datang di game tebak angka \nTebak angka 1 - 10\nKamu mempunyai 3 kesempatan')
 
     // komputer memilih angka
     let aiCom = Math.floor(Math.random() * 10) + 1
 
-    // rules
-    let hasil = ''
-    if (player === aiCom) {
-        hasil = 'benar!'
-    } else if (player > aiCom) {
-        hasil = 'terlalu tinggi!'
-    } else if (player < aiCom) {
-        hasil = 'terlalu rendah!'
-    } else {
-        hasil = 'bukan angka!'
+    // kesempatan
+    let kesempatan = 3
+    let berhasil = false
+
+    //rules
+    while (kesempatan > 0){
+        // player memilih angka
+        let player = parseInt(prompt('Masukkan angka tebakan(1-10)'))
+
+        if (player === aiCom) {
+            alert('Tebakanmu benar!\nAngka: ' + aiCom)
+            berhasil = true
+            break
+        } else if (player > aiCom) {
+            alert('Tebakanmu terlalu tinggi\nKesempatan tersisa: ' + (kesempatan - 1))
+        } else if (player < aiCom) {
+            alert('Tebakanmu terlalu rendah\nKesempatan tersisa: ' + (kesempatan - 1))
+        } else {
+            alert('Input salah\nKesempatan tersisa: ' + kesempatan)
+        }
+
+        kesempatan--
     }
 
-    // output
-    alert('Tebakanmu ' + hasil + '\nAngka yang kamu input adalah: ' + player + '\nAngka yang benar adalah: ' + aiCom)
-
+    if (!berhasil) {
+        alert('Kesempatan habis!\nAngka yang benar adalah: ' + aiCom)
+    }
+    
     ulang = confirm('Mau main lagi?')
 }
 
