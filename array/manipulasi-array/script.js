@@ -27,6 +27,14 @@ Method pada array
     })
 11. sort = mengurutkan nilai array
     namaArray.sort()
+12. filter = mencari nilai dan mengembalikan dalam bentuk array
+    namaArray.filter(function(parameter){
+        return kondisi parameter
+    })
+13. find = mencari nilai tapi tidak mengembalikan dalam bentuk array
+    namaArray.find(function(parameter){
+        return kondisi parameter
+    })
 */
 
 let jurusan = ['PM','MPLB','TJKT','AKL','TO','Perhotelan','PPLG']
@@ -67,3 +75,14 @@ console.log(angka2)
 
 jurusan.sort() // sort
 console.table(jurusan)
+
+let number = [1,1,2,3,3,4,4,4,5] // filter
+let number2 = number.filter(function(e){
+    return e == 4
+})
+console.log(number2)
+
+let cariJurusan = jurusan.find(function(cari){
+    return cari == 'PPLG'
+})
+console.log(cariJurusan)
