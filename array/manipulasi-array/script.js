@@ -40,49 +40,62 @@ Method pada array
 let jurusan = ['PM','MPLB','TJKT','AKL','TO','Perhotelan','PPLG']
 
 console.table(jurusan)
-console.log('Isi dari data ini ada: ' + jurusan.length) // length
+// length
+console.log('Isi dari data ini ada: ' + jurusan.length)
 
-console.log(jurusan.join(' - ')) // join
+// join
+console.log(jurusan.join(' - ')) 
 
-jurusan.push('TKR','TITL') // push
+// push
+jurusan.push('TKR','TITL') 
 console.table(jurusan)
 
-jurusan.pop() // pop
+// pop
+jurusan.pop() 
 console.table(jurusan)
 
-jurusan.unshift('TITL','Tata Boga') // unshift
+// unshift
+jurusan.unshift('TITL','Tata Boga') 
 console.table(jurusan)
 
-jurusan.shift() // shift
+// shift
+jurusan.shift() 
 console.table(jurusan)
 
-let jurusan2 = jurusan.slice(3, 7) // slice
+// slice
+let jurusan2 = jurusan.slice(3, 7) 
 console.table(jurusan2)
 console.table(jurusan)
 
-jurusan.splice(5, 0, 'DKV','TITL') // splice
+// splice
+jurusan.splice(5, 0, 'DKV','TITL') 
 console.table(jurusan)
 
-jurusan.forEach(function(e){ // forEach
+// forEach
+jurusan.forEach(function(e){ 
     console.log(e)
 })
 
-let angka = [1, 3, 8, 4, 6, 2, 9] // map
+// map
+let angka = [1, 3, 8, 4, 6, 2, 9] 
 let angka2 = angka.map(function(e){
     return e * 2
 })
 console.log(angka2)
 
-jurusan.sort() // sort
+// sort
+jurusan.sort() 
 console.table(jurusan)
 
-let number = [1,1,2,3,3,4,4,4,5] // filter
+// filter
+let number = [1,1,2,3,3,4,4,4,5] 
 let number2 = number.filter(function(e){
     return e == 4
 })
 console.log(number2)
 
-let cariJurusan = jurusan.find(function(cari){
+// find
+let cariJurusan = jurusan.find(function(cari){ 
     return cari == 'PPLG'
 })
 console.log(cariJurusan)
