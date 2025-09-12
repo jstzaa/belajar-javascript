@@ -16,6 +16,17 @@ Method pada array
     let arr2 = arr1.slice(indexAwal,indexAkhir+1)
 8. splice = menyisipkan nilai di tengah-tengah array
     namaArray.splice(indexAwal,mauDiHapusBerapa,'nilai')
+9. forEach = pengulangan pada array
+    namaArray.forEach(function(e){
+        console.log(e)
+    })
+10. map = pengulangan pada array yang mengembalikan array
+    let namaArray = []
+    let namaArray2 = namaArray.map(function(parameter){
+        return parameter
+    })
+11. sort = mengurutkan nilai array
+    namaArray.sort()
 */
 
 let jurusan = ['PM','MPLB','TJKT','AKL','TO','Perhotelan','PPLG']
@@ -42,4 +53,17 @@ console.table(jurusan2)
 console.table(jurusan)
 
 jurusan.splice(5, 0, 'DKV','TITL') // splice
+console.table(jurusan)
+
+jurusan.forEach(function(e){ // forEach
+    console.log(e)
+})
+
+let angka = [1, 3, 8, 4, 6, 2, 9] // map
+let angka2 = angka.map(function(e){
+    return e * 2
+})
+console.log(angka2)
+
+jurusan.sort() // sort
 console.table(jurusan)
