@@ -12,6 +12,10 @@ Method pada array
     namaArray.unshift('nilai1')
 6. shift = menghapus nilai pertama pada array
     namaArray.shift()
+7. slice = mengiris sebuah array menjadi array baru
+    let arr2 = arr1.slice(indexAwal,indexAkhir+1)
+8. splice = menyisipkan nilai di tengah-tengah array
+    namaArray.splice(indexAwal,mauDiHapusBerapa,'nilai')
 */
 
 let jurusan = ['PM','MPLB','TJKT','AKL','TO','Perhotelan','PPLG']
@@ -21,14 +25,21 @@ console.log('Isi dari data ini ada: ' + jurusan.length) // length
 
 console.log(jurusan.join(' - ')) // join
 
-console.log(jurusan.push('TKR','TITL')) // push
+jurusan.push('TKR','TITL') // push
 console.table(jurusan)
 
-console.log(jurusan.pop()) // pop
+jurusan.pop() // pop
 console.table(jurusan)
 
-console.log(jurusan.unshift('TITL','Tata Boga')) // unshift
+jurusan.unshift('TITL','Tata Boga') // unshift
 console.table(jurusan)
 
-console.log(jurusan.shift()) // shift
+jurusan.shift() // shift
+console.table(jurusan)
+
+let jurusan2 = jurusan.slice(3, 7) // slice
+console.table(jurusan2)
+console.table(jurusan)
+
+jurusan.splice(5, 0, 'DKV','TITL') // splice
 console.table(jurusan)
