@@ -1,0 +1,27 @@
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#tombol {
+    padding: 20px 50px 20px 50px;
+    border-radius: 50px;
+    border: 1px black solid;
+    background-color: azure;
+}
+
+
+.container1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#tombol1 {
+    padding: 20px 50px 20px 50px;
+    border-radius: 50px;
+    border: 1px black solid;
+    background-color: rgb(98, 228, 228);
+}
