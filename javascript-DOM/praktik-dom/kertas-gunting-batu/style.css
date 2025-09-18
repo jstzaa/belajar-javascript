@@ -1,0 +1,53 @@
+body {
+    background-color: lightblue;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Jersey 15';
+    font-size: 40px;
+}
+
+.aiCom {
+    border: 2px black solid;
+    padding: 50px 50px 50px 50px;
+    margin: 20px 50px 20px 50px;
+    border-radius: 40px 40px 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    background-color: lightcoral;
+}
+
+.player {
+    border: 2px black solid;
+    padding: 50px 50px 50px 50px;
+    margin: 20px 50px 20px 50px;
+    border-radius: 0px 0px 40px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: lightgreen;
+}
+
+.info {
+    border: 2px black solid;
+    padding: 10px;
+    margin: 20px 50px 20px 50px;
+    border-radius: 0px 0px 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    font-family: 'Jersey 15';
+    background-color: antiquewhite;
+}
+
+.kertas, .gunting, .batu {
+    background-color: antiquewhite;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 40px;
+}
